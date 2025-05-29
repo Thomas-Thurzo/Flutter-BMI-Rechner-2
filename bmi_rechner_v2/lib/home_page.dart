@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController gewichtController = TextEditingController();
   TextEditingController groesseController = TextEditingController();
   String bmiErgebnis = " ";
-  Color farbe = Colors.transparent;
+  Color bmiFarbe = Colors.transparent;
 
   // Methode zum BMI berechnen
   void berechneBmi() {
@@ -41,19 +41,18 @@ class _HomePageState extends State<HomePage> {
 
     setState(() {
       bmiErgebnis = ergebnis.toStringAsFixed(2);
-      farbe = meineFarbe;
+      bmiFarbe = meineFarbe;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    double geraetHoehe = MediaQuery.of(context).size.height;
-
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            height: geraetHoehe,
+            height: height,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [const Color(0xFF6DD5ED), const Color(0xFF2193B0)],
@@ -85,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 80),
 
                   // BMI Ergebnis Container
-                  BmiErgebnisWidget(ergebnis: bmiErgebnis, farbe: farbe),
+                  BmiErgebnisWidget(ergebnis: bmiErgebnis, farbe: bmiFarbe),
                   SizedBox(height: 80),
 
                   // BMI Kategorie Farben
