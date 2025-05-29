@@ -15,6 +15,7 @@ class GroesseEingabeWidget extends StatelessWidget {
         keyboardType: TextInputType.numberWithOptions(decimal: true),
         style: TextStyle(fontSize: 18, color: Colors.black),
         decoration: InputDecoration(
+          label: Text('Größe'),
           hintText: 'Bitte die Größe (m) eingeben',
           filled: true,
           fillColor: Colors.white,

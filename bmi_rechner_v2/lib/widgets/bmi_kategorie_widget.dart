@@ -11,9 +11,9 @@ class BmiKategorieWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          KategorieIndikatorWidget(farbe: untergewicht, label: 'Untergewicht'),
+          KategorieIndikatorWidget(farbe: untergewicht, label: 'Unter'),
           KategorieIndikatorWidget(farbe: normal, label: 'Normal'),
-          KategorieIndikatorWidget(farbe: uebergewicht, label: 'Übergewicht'),
+          KategorieIndikatorWidget(farbe: uebergewicht, label: 'Über'),
           KategorieIndikatorWidget(farbe: fett, label: 'Fettleibig'),
           KategorieIndikatorWidget(farbe: extrem, label: 'Extrem'),
         ],
